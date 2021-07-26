@@ -1,10 +1,10 @@
 def try_me(volume, preco):
-    preco_final = (preco * volume) / 1000
+    preco_final = (1000 * preco) / volume
 
-    return preco_final
+    return (f'Preço por kg: R${preco_final:.2f}')
 
 print('*** Preço por Kilo ***')
-gramas = input(float('gramas: '))
-preco = input(float('preço: '))
+gramas = float(input('gramas: '))
+preco = float(input('preço: '))
 
-try_me(gramas, preco)
+print(try_me(gramas, preco))
